@@ -1,6 +1,7 @@
 import os
 import sys
 from transformers import HfArgumentParser, TrainingArguments, set_seed
+from trl import SFTTrainer
 
 # Our modules
 from modules.data_utils import create_datasets, DataTrainingArguments
@@ -23,7 +24,6 @@ def llm_fine_tune(model_args, data_args, training_args):
     train_dataset, eval_dataset = create_datasets(
         tokenizer,
         data_args,
-        training_args,
         apply_chat_template=model_args.chat_template_format != "none",
     )
 

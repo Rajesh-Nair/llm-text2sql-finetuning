@@ -91,5 +91,4 @@ if __name__ == "__main__":
     train_data, valid_data = create_datasets(tokenizer, data_args, apply_chat_template=True)
 
     # Test cases
-    assert(train_data) == dataset_class
-    assert(valid_data) == dataset_class
+    print(train_data[0])

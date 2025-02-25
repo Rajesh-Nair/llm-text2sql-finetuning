@@ -8,6 +8,36 @@ from peft import LoraConfig
 from dataclasses import dataclass, field
 from typing import Optional
 
+from enum import Enum
+
+
+DEFAULT_CHATML_CHAT_TEMPLATE = "{% for message in messages %}\n{{'' + message['role'] + '\n' + message['content'] + '' + '\n'}}{% if loop.last and add_generation_prompt %}{{'assistant\n' }}{% endif %}{% endfor %}"
+DEFAULT_ZEPHYR_CHAT_TEMPLATE = "{% for message in messages %}\n{% if message['role'] == 'user' %}\n{{ '\n' + message['content'] + eos_token }}\n{% elif message['role'] == 'system' %}\n{{ '\n' + message['content'] + eos_token }}\n{% elif message['role'] == 'assistant' %}\n{{ '\n'  + message['content'] + eos_token }}\n{% endif %}\n{% if loop.last and add_generation_prompt %}\n{{ '' }}\n{% endif %}\n{% endfor %}"
+
+class ZephyrSpecialTokens(str, Enum):
+    user = ""
+    assistant = ""
+    system = ""
+    eos_token = "</s>"
+    bos_token = "<s>"
+    pad_token = "<pad>"
+
+    @classmethod
+    def list(cls):
+        return [c.value for c in cls]
+
+class ChatmlSpecialTokens(str, Enum):
+    user = "user"
+    assistant = "assistant"
+    system = "system"
+    eos_token = ""
+    bos_token = "<s>"
+    pad_token = "<pad>"
+
+    @classmethod
+    def list(cls):
+        return [c.value for c in cls]
+
 # Define and parse arguments.
 @dataclass
 class ModelArguments:
@@ -145,7 +175,7 @@ def create_and_prepare_model(args, data_args, training_args):
     chat_template = None
     if args.chat_template_format == "chatml":
         special_tokens = ChatmlSpecialTokens
-        chat_template = DEFAULT_CHATML_CHAT_TEMPLATE
+        #chat_template = DEFAULT_CHATML_CHAT_TEMPLATE
     elif args.chat_template_format == "zephyr":
         special_tokens = ZephyrSpecialTokens
         chat_template = DEFAULT_ZEPHYR_CHAT_TEMPLATE
@@ -159,7 +189,7 @@ def create_and_prepare_model(args, data_args, training_args):
             additional_special_tokens=special_tokens.list(),
             trust_remote_code=True,
         )
-        tokenizer.chat_template = chat_template
+        #tokenizer.chat_template = chat_template
         # make embedding resizing configurable?
         model.resize_token_embeddings(len(tokenizer), pad_to_multiple_of=8)
     else:
