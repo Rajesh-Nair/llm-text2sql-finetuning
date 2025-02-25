@@ -1,6 +1,6 @@
 #ModelArguments 
 model_name_or_path : "TinyLlama/TinyLlama-1.1B-Chat-v1.0" 
-chat_template_format : "chatml" 
+chat_template_format : "" 
 lora_alpha : 16 
 lora_dropout : 0.1 
 lora_r : 8 
@@ -24,7 +24,7 @@ splits : "train,test"
 
 # TrainingArguments 
 seed : 100 
-num_train_epochs : 1 
+num_train_epochs : 10 
 logging_steps : 5 
 log_level : "info" 
 logging_strategy : "steps" 
