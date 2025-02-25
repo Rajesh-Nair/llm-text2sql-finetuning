@@ -24,7 +24,7 @@ splits : "train,test"
 
 # TrainingArguments 
 seed : 100 
-num_train_epochs : 10 
+num_train_epochs : 4 
 logging_steps : 5 
 log_level : "info" 
 logging_strategy : "steps" 
