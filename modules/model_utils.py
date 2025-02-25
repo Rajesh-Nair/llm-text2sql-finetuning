@@ -175,7 +175,7 @@ def create_and_prepare_model(args, data_args, training_args):
     chat_template = None
     if args.chat_template_format == "chatml":
         special_tokens = ChatmlSpecialTokens
-        #chat_template = DEFAULT_CHATML_CHAT_TEMPLATE
+        chat_template = DEFAULT_CHATML_CHAT_TEMPLATE
     elif args.chat_template_format == "zephyr":
         special_tokens = ZephyrSpecialTokens
         chat_template = DEFAULT_ZEPHYR_CHAT_TEMPLATE
@@ -189,7 +189,7 @@ def create_and_prepare_model(args, data_args, training_args):
             additional_special_tokens=special_tokens.list(),
             trust_remote_code=True,
         )
-        #tokenizer.chat_template = chat_template
+        tokenizer.chat_template = chat_template
         # make embedding resizing configurable?
         model.resize_token_embeddings(len(tokenizer), pad_to_multiple_of=8)
     else:
