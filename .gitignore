@@ -1,2 +1,8 @@
 run_steps.sh
 ./merged_model/*
+*.ckpt
+*.safetensors
+*.pth
+.ipynb_checkpoints/*
+*/__pycache__/*
+Tinyllama-ft-qlora-dsz3/
