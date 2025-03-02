@@ -422,3 +422,27 @@ Parameter Offload: Total persistent parameters: 6400000 in 353 params
 {'loss': 0.6176, 'grad_norm': 0.3064572133164066, 'learning_rate': 5.7632464210943726e-05, 'epoch': 1.8}
 {'loss': 0.6132, 'grad_norm': 0.33388906281746894, 'learning_rate': 5.668454416423242e-05, 'epoch': 1.83}
 {'loss': 0.6183, 'grad_norm': 0.3019280578645594, 'learning_rate': 5.573417126992003e-05, 'epoch': 1.85}
+{'loss': 0.6247, 'grad_norm': 0.3176629936987728, 'learning_rate': 5.478169426081712e-05, 'epoch': 1.88}
+{'loss': 0.6207, 'grad_norm': 0.3127467672099598, 'learning_rate': 5.38274626418248e-05, 'epoch': 1.9}
+{'loss': 0.6113, 'grad_norm': 0.35273336394709387, 'learning_rate': 5.287182656168618e-05, 'epoch': 1.93}
+{'loss': 0.6158, 'grad_norm': 0.3100538787493987, 'learning_rate': 5.191513668450178e-05, 'epoch': 1.95}
+{'loss': 0.6122, 'grad_norm': 0.3038929963494663, 'learning_rate': 5.095774406105571e-05, 'epoch': 1.98}
+{'loss': 0.6235, 'grad_norm': 0.3238110825717284, 'learning_rate': 5e-05, 'epoch': 2.0}
+{'eval_loss': 0.6184434294700623, 'eval_runtime': 89.8012, 'eval_samples_per_second': 4.031, 'eval_steps_per_second': 0.512, 'epoch': 2.0}
+[2025-03-02 00:51:54,906] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step410 is about to be saved!
+[2025-03-02 00:51:54,934] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-03-02 00:51:54,934] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-03-02 00:51:54,993] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-03-02 00:51:54,995] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-03-02 00:51:55,036] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-03-02 00:51:55,037] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-03-02 00:51:55,054] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step410 is ready now!
+{'loss': 0.6072, 'grad_norm': 0.3243713650434016, 'learning_rate': 4.9042255938944296e-05, 'epoch': 2.02}
+{'loss': 0.6035, 'grad_norm': 0.316067152357226, 'learning_rate': 4.8084863315498234e-05, 'epoch': 2.05}
+{'loss': 0.6113, 'grad_norm': 0.3259731381913719, 'learning_rate': 4.712817343831384e-05, 'epoch': 2.07}
+{'loss': 0.6025, 'grad_norm': 0.34123509591776785, 'learning_rate': 4.6172537358175214e-05, 'epoch': 2.1}
+{'loss': 0.6011, 'grad_norm': 0.3000658919527791, 'learning_rate': 4.521830573918289e-05, 'epoch': 2.12}
+{'loss': 0.6042, 'grad_norm': 0.3286237883164358, 'learning_rate': 4.4265828730079987e-05, 'epoch': 2.15}
+{'loss': 0.6123, 'grad_norm': 0.3183199137679708, 'learning_rate': 4.331545583576758e-05, 'epoch': 2.17}
+{'loss': 0.6138, 'grad_norm': 0.33407830762669966, 'learning_rate': 4.236753578905627e-05, 'epoch': 2.2}
+{'loss': 0.6028, 'grad_norm': 0.31608642443868157, 'learning_rate': 4.142241642270108e-05, 'epoch': 2.22}
