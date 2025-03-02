@@ -489,3 +489,13 @@ Parameter Offload: Total persistent parameters: 6400000 in 353 params
 [2025-03-02 01:39:50,782] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step615 is ready now!
 {'loss': 0.5933, 'grad_norm': 0.31507227556405737, 'learning_rate': 1.3973920319960655e-05, 'epoch': 3.02}
 {'loss': 0.5921, 'grad_norm': 0.33812758520558434, 'learning_rate': 1.3316399221919074e-05, 'epoch': 3.05}
+{'loss': 0.596, 'grad_norm': 0.32792428940348906, 'learning_rate': 1.2672338919401866e-05, 'epoch': 3.07}
+{'loss': 0.6011, 'grad_norm': 0.364878045711614, 'learning_rate': 1.2041975745916472e-05, 'epoch': 3.1}
+{'loss': 0.5943, 'grad_norm': 0.32519078003352575, 'learning_rate': 1.1425541008902851e-05, 'epoch': 3.12}
+{'loss': 0.5821, 'grad_norm': 0.32458031108159036, 'learning_rate': 1.082326090485679e-05, 'epoch': 3.15}
+{'loss': 0.5927, 'grad_norm': 0.34191802952745837, 'learning_rate': 1.0235356436328675e-05, 'epoch': 3.17}
+{'loss': 0.5877, 'grad_norm': 0.32555248218422134, 'learning_rate': 9.662043330828085e-06, 'epoch': 3.2}
+{'loss': 0.5869, 'grad_norm': 0.3219672364335901, 'learning_rate': 9.103531961664118e-06, 'epoch': 3.22}
+{'loss': 0.5935, 'grad_norm': 0.3215808297425796, 'learning_rate': 8.560027270750277e-06, 'epoch': 3.24}
+{'loss': 0.5893, 'grad_norm': 0.32137528581066643, 'learning_rate': 8.031728693402502e-06, 'epoch': 3.27}
+{'loss': 0.5943, 'grad_norm': 0.3515300534988939, 'learning_rate': 7.518830085157735e-06, 'epoch': 3.29}
