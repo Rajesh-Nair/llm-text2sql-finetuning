@@ -1,9 +1,14 @@
+# Specific files/objects
 run_steps.sh
-merged_model/*
+
+# generic extensions
 **/*.ckpt
 **/*.safetensors
 **/*.pth
-*/.ipynb_checkpoints/*
+**/.ipynb_checkpoints/
 **/__pycache__/
 **/*.pyc
+
+# Model folders
 Tinyllama-ft-qlora-dsz3/*
+merged_model/*
