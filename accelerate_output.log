@@ -1,0 +1,501 @@
+[2025-03-01 23:17:48,018] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-03-01 23:17:52,364] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-03-01 23:17:52,417] [INFO] [real_accelerator.py:222:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+['train.py', 'run_config.yaml']
+[2025-03-01 23:17:53,269] [INFO] [comm.py:658:init_distributed] cdb=None
+['train.py', 'run_config.yaml']
+[2025-03-01 23:17:53,642] [INFO] [comm.py:658:init_distributed] cdb=None
+[2025-03-01 23:17:53,642] [INFO] [comm.py:689:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Dataset test data not available in the source
+Dataset test data not available in the source
+Spliting train data 90:10 since no test data available
+Spliting train data 90:10 since no test data available
+PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): LlamaForCausalLM(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 2048)
+        (layers): ModuleList(
+          (0-21): 22 x LlamaDecoderLayer(
+            (self_attn): LlamaAttention(
+              (q_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=2048, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=2048, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (k_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=256, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=256, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (v_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=256, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=256, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (o_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=2048, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=2048, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=5632, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=5632, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (up_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=2048, out_features=5632, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=2048, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=5632, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (down_proj): lora.Linear4bit(
+                (base_layer): Linear4bit(in_features=5632, out_features=2048, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.1, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=5632, out_features=8, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=8, out_features=2048, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+                (lora_magnitude_vector): ModuleDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+            (post_attention_layernorm): LlamaRMSNorm((2048,), eps=1e-05)
+          )
+        )
+        (norm): LlamaRMSNorm((2048,), eps=1e-05)
+        (rotary_emb): LlamaRotaryEmbedding()
+      )
+      (lm_head): Linear(in_features=2048, out_features=32000, bias=False)
+    )
+  )
+)
+lets start training...........
+lets start training...........
+[2025-03-01 23:18:46,179] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.16.4, git-hash=unknown, git-branch=unknown
+[2025-03-01 23:18:46,179] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 2
+[2025-03-01 23:18:46,554] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-03-01 23:18:46,557] [INFO] [logging.py:128:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-03-01 23:18:46,557] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-03-01 23:18:46,577] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2025-03-01 23:18:46,577] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2025-03-01 23:18:46,578] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-03-01 23:18:46,578] [INFO] [logging.py:128:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-03-01 23:18:46,712] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2025-03-01 23:18:46,713] [INFO] [utils.py:782:see_memory_usage] MA 0.73 GB         Max_MA 0.73 GB         CA 0.77 GB         Max_CA 1 GB 
+[2025-03-01 23:18:46,713] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.45 GB, percent = 1.8%
+[2025-03-01 23:18:46,718] [INFO] [stage3.py:170:__init__] Reduce bucket size 500000000
+[2025-03-01 23:18:46,719] [INFO] [stage3.py:171:__init__] Prefetch bucket size 50000000
+[2025-03-01 23:18:46,848] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-03-01 23:18:46,849] [INFO] [utils.py:782:see_memory_usage] MA 0.73 GB         Max_MA 0.73 GB         CA 0.77 GB         Max_CA 1 GB 
+[2025-03-01 23:18:46,849] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.45 GB, percent = 1.8%
+[2025-03-01 23:18:46,862] [INFO] [config.py:734:__init__] Config mesh_device None world_size = 2
+Parameter Offload: Total persistent parameters: 6400000 in 353 params
+[2025-03-01 23:18:47,170] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-03-01 23:18:47,170] [INFO] [utils.py:782:see_memory_usage] MA 0.37 GB         Max_MA 0.79 GB         CA 0.87 GB         Max_CA 1 GB 
+[2025-03-01 23:18:47,171] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.45 GB, percent = 1.8%
+[2025-03-01 23:18:47,312] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2025-03-01 23:18:47,313] [INFO] [utils.py:782:see_memory_usage] MA 0.37 GB         Max_MA 0.37 GB         CA 0.87 GB         Max_CA 1 GB 
+[2025-03-01 23:18:47,313] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.45 GB, percent = 1.8%
+[2025-03-01 23:18:47,612] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 1
+[2025-03-01 23:18:47,613] [INFO] [utils.py:782:see_memory_usage] MA 0.37 GB         Max_MA 0.37 GB         CA 0.65 GB         Max_CA 1 GB 
+[2025-03-01 23:18:47,614] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.46 GB, percent = 1.8%
+[2025-03-01 23:18:47,756] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2025-03-01 23:18:47,757] [INFO] [utils.py:782:see_memory_usage] MA 0.37 GB         Max_MA 0.37 GB         CA 0.65 GB         Max_CA 1 GB 
+[2025-03-01 23:18:47,757] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.46 GB, percent = 1.8%
+[2025-03-01 23:18:47,902] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2025-03-01 23:18:47,903] [INFO] [utils.py:782:see_memory_usage] MA 0.38 GB         Max_MA 0.39 GB         CA 0.65 GB         Max_CA 1 GB 
+[2025-03-01 23:18:47,903] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.46 GB, percent = 1.8%
+[2025-03-01 23:18:48,046] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2025-03-01 23:18:48,047] [INFO] [utils.py:782:see_memory_usage] MA 0.38 GB         Max_MA 0.38 GB         CA 0.65 GB         Max_CA 1 GB 
+[2025-03-01 23:18:48,047] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.46 GB, percent = 1.8%
+[2025-03-01 23:18:48,187] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2025-03-01 23:18:48,188] [INFO] [utils.py:782:see_memory_usage] MA 0.38 GB         Max_MA 0.4 GB         CA 0.65 GB         Max_CA 1 GB 
+[2025-03-01 23:18:48,188] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.46 GB, percent = 1.8%
+[2025-03-01 23:18:48,189] [INFO] [stage3.py:534:_setup_for_real_optimizer] optimizer state initialized
+[2025-03-01 23:18:48,416] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2025-03-01 23:18:48,417] [INFO] [utils.py:782:see_memory_usage] MA 1.32 GB         Max_MA 1.32 GB         CA 1.58 GB         Max_CA 2 GB 
+[2025-03-01 23:18:48,418] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 18.5 GB, percent = 1.8%
+[2025-03-01 23:18:48,418] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2025-03-01 23:18:48,418] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2025-03-01 23:18:48,418] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-03-01 23:18:48,418] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0001], mom=[(0.9, 0.999)]
+[2025-03-01 23:18:48,422] [INFO] [config.py:1001:print] DeepSpeedEngine configuration:
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'intra_op_parallelism': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   amp_enabled .................. False
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   amp_params ................... False
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   bfloat16_enabled ............. True
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   bfloat16_immediate_grad_update  False
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   checkpoint_parallel_write_pipeline  False
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   checkpoint_tag_validation_enabled  True
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   checkpoint_tag_validation_fail  False
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x70c0782d8bb0>
+[2025-03-01 23:18:48,423] [INFO] [config.py:1005:print]   communication_data_type ...... None
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   curriculum_enabled_legacy .... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   curriculum_params_legacy ..... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   data_efficiency_enabled ...... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   dataloader_drop_last ......... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   disable_allgather ............ False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   dump_state ................... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   dynamic_loss_scale_args ...... None
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_enabled ........... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_gas_boundary_resolution  1
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_layer_num ......... 0
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_max_iter .......... 100
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_stability ......... 1e-06
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_tol ............... 0.01
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   eigenvalue_verbose ........... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   elasticity_enabled ........... False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   fp16_auto_cast ............... None
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   fp16_enabled ................. False
+[2025-03-01 23:18:48,424] [INFO] [config.py:1005:print]   fp16_master_weights_and_gradients  False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   global_rank .................. 0
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   grad_accum_dtype ............. None
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   gradient_accumulation_steps .. 2
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   gradient_clipping ............ 1.0
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   gradient_predivide_factor .... 1.0
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   graph_harvesting ............. False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   initial_dynamic_scale ........ 1
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   load_universal_checkpoint .... False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   loss_scale ................... 1.0
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   memory_breakdown ............. False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   mics_hierarchial_params_gather  False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   mics_shard_size .............. -1
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   optimizer_legacy_fusion ...... False
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   optimizer_name ............... None
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   optimizer_params ............. None
+[2025-03-01 23:18:48,425] [INFO] [config.py:1005:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   pld_enabled .................. False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   pld_params ................... False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   prescale_gradients ........... False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   scheduler_name ............... None
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   scheduler_params ............. None
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   seq_parallel_communication_data_type  torch.float32
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   sparse_attention ............. None
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   sparse_gradients_enabled ..... False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   steps_per_print .............. inf
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   tensor_parallel_config ....... dtype=torch.float16 autotp_size=0 tensor_parallel=TPConfig(tp_size=1, tp_grain_size=1, mpu=None, tp_group=None) injection_policy_tuple=None keep_module_on_host=False replace_with_kernel_inject=False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   timers_config ................ enabled=True synchronized=True
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   train_batch_size ............. 16
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   train_micro_batch_size_per_gpu  4
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   use_data_before_expert_parallel_  False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   use_node_local_storage ....... False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   wall_clock_breakdown ......... False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   weight_quantization_config ... None
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   world_size ................... 2
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   zero_allow_untested_optimizer  True
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True module_granularity_threshold=0 use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False zeropp_loco_param=None mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True log_trace_cache_warnings=False
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   zero_enabled ................. True
+[2025-03-01 23:18:48,426] [INFO] [config.py:1005:print]   zero_force_ds_cpu_optimizer .. True
+[2025-03-01 23:18:48,427] [INFO] [config.py:1005:print]   zero_optimization_stage ...... 3
+[2025-03-01 23:18:48,427] [INFO] [config.py:991:print_user_config]   json = {
+    "train_batch_size": 16, 
+    "train_micro_batch_size_per_gpu": 4, 
+    "gradient_accumulation_steps": 2, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+{'loss': 1.1602, 'grad_norm': 0.38204982308288216, 'learning_rate': 9.999082642158973e-05, 'epoch': 0.02}
+{'loss': 1.0312, 'grad_norm': 0.25743123448543215, 'learning_rate': 9.99633090525405e-05, 'epoch': 0.05}
+{'loss': 0.9867, 'grad_norm': 0.24406551648555544, 'learning_rate': 9.991745799016206e-05, 'epoch': 0.07}
+{'loss': 0.9467, 'grad_norm': 0.2220813137626836, 'learning_rate': 9.985329005918702e-05, 'epoch': 0.1}
+{'loss': 0.9083, 'grad_norm': 0.19050976715327253, 'learning_rate': 9.977082880559725e-05, 'epoch': 0.12}
+{'loss': 0.8719, 'grad_norm': 0.1748080476767825, 'learning_rate': 9.967010448798375e-05, 'epoch': 0.15}
+{'loss': 0.8502, 'grad_norm': 0.18067850644774153, 'learning_rate': 9.955115406644356e-05, 'epoch': 0.17}
+{'loss': 0.8189, 'grad_norm': 0.1597596885817009, 'learning_rate': 9.941402118901744e-05, 'epoch': 0.2}
+{'loss': 0.8128, 'grad_norm': 0.17326002969433152, 'learning_rate': 9.92587561756735e-05, 'epoch': 0.22}
+{'loss': 0.7842, 'grad_norm': 0.1620481408590106, 'learning_rate': 9.908541599984276e-05, 'epoch': 0.24}
+{'loss': 0.7865, 'grad_norm': 0.16407274731240717, 'learning_rate': 9.889406426751296e-05, 'epoch': 0.27}
+{'loss': 0.7721, 'grad_norm': 0.1635483587428136, 'learning_rate': 9.868477119388896e-05, 'epoch': 0.29}
+{'loss': 0.748, 'grad_norm': 0.17455410574161803, 'learning_rate': 9.84576135776276e-05, 'epoch': 0.32}
+{'loss': 0.744, 'grad_norm': 0.18179056020289489, 'learning_rate': 9.821267477265705e-05, 'epoch': 0.34}
+{'loss': 0.7345, 'grad_norm': 0.17985774044704195, 'learning_rate': 9.795004465759065e-05, 'epoch': 0.37}
+{'loss': 0.7318, 'grad_norm': 0.20121015729406275, 'learning_rate': 9.766981960274653e-05, 'epoch': 0.39}
+{'loss': 0.7152, 'grad_norm': 0.19767019517826367, 'learning_rate': 9.737210243478521e-05, 'epoch': 0.41}
+{'loss': 0.7218, 'grad_norm': 0.2169074567430063, 'learning_rate': 9.705700239897809e-05, 'epoch': 0.44}
+{'loss': 0.7116, 'grad_norm': 0.21412513727942353, 'learning_rate': 9.672463511912055e-05, 'epoch': 0.46}
+{'loss': 0.7065, 'grad_norm': 0.2107657282971761, 'learning_rate': 9.637512255510475e-05, 'epoch': 0.49}
+{'loss': 0.6969, 'grad_norm': 0.21234201915148757, 'learning_rate': 9.600859295816708e-05, 'epoch': 0.51}
+{'loss': 0.7064, 'grad_norm': 0.23799963396943638, 'learning_rate': 9.56251808238275e-05, 'epoch': 0.54}
+{'loss': 0.6893, 'grad_norm': 0.22391998193406173, 'learning_rate': 9.522502684253709e-05, 'epoch': 0.56}
+{'loss': 0.6857, 'grad_norm': 0.23736135897888638, 'learning_rate': 9.480827784805278e-05, 'epoch': 0.59}
+{'loss': 0.6932, 'grad_norm': 0.2769243306199721, 'learning_rate': 9.437508676355773e-05, 'epoch': 0.61}
+{'loss': 0.6827, 'grad_norm': 0.24752756216513086, 'learning_rate': 9.392561254554713e-05, 'epoch': 0.63}
+{'loss': 0.6859, 'grad_norm': 0.2770378797321632, 'learning_rate': 9.346002012550027e-05, 'epoch': 0.66}
+{'loss': 0.6814, 'grad_norm': 0.23698389827331073, 'learning_rate': 9.297848034936006e-05, 'epoch': 0.68}
+{'loss': 0.6708, 'grad_norm': 0.23744035385583606, 'learning_rate': 9.248116991484229e-05, 'epoch': 0.71}
+{'loss': 0.6699, 'grad_norm': 0.2479551937008164, 'learning_rate': 9.19682713065975e-05, 'epoch': 0.73}
+{'loss': 0.6738, 'grad_norm': 0.2752980039339283, 'learning_rate': 9.143997272924973e-05, 'epoch': 0.76}
+{'loss': 0.6727, 'grad_norm': 0.26012687990560357, 'learning_rate': 9.089646803833589e-05, 'epoch': 0.78}
+{'loss': 0.664, 'grad_norm': 0.2516119253304262, 'learning_rate': 9.033795666917191e-05, 'epoch': 0.8}
+{'loss': 0.6627, 'grad_norm': 0.28014552933789394, 'learning_rate': 8.976464356367134e-05, 'epoch': 0.83}
+{'loss': 0.6638, 'grad_norm': 0.2725173147752906, 'learning_rate': 8.917673909514322e-05, 'epoch': 0.85}
+{'loss': 0.6557, 'grad_norm': 0.26447712525922806, 'learning_rate': 8.857445899109715e-05, 'epoch': 0.88}
+{'loss': 0.6461, 'grad_norm': 0.2705461130683546, 'learning_rate': 8.795802425408352e-05, 'epoch': 0.9}
+{'loss': 0.6625, 'grad_norm': 0.27373032206318115, 'learning_rate': 8.732766108059813e-05, 'epoch': 0.93}
+{'loss': 0.6516, 'grad_norm': 0.2723046962146206, 'learning_rate': 8.668360077808093e-05, 'epoch': 0.95}
+{'loss': 0.6524, 'grad_norm': 0.3148474457377971, 'learning_rate': 8.602607968003935e-05, 'epoch': 0.98}
+{'loss': 0.6448, 'grad_norm': 0.27528978615948646, 'learning_rate': 8.535533905932738e-05, 'epoch': 1.0}
+{'eval_loss': 0.6500059366226196, 'eval_runtime': 88.5692, 'eval_samples_per_second': 4.087, 'eval_steps_per_second': 0.519, 'epoch': 1.0}
+[2025-03-02 00:03:42,843] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step205 is about to be saved!
+[2025-03-02 00:03:42,872] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-03-02 00:03:42,872] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-03-02 00:03:42,931] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-03-02 00:03:42,933] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-03-02 00:03:42,968] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-03-02 00:03:42,969] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-205/global_step205/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-03-02 00:03:42,993] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step205 is ready now!
+{'loss': 0.6474, 'grad_norm': 0.29912052507576015, 'learning_rate': 8.467162503961208e-05, 'epoch': 1.02}
+{'loss': 0.6455, 'grad_norm': 0.27743759085799446, 'learning_rate': 8.397518850506028e-05, 'epoch': 1.05}
+{'loss': 0.6407, 'grad_norm': 0.31667512144902893, 'learning_rate': 8.326628500827826e-05, 'epoch': 1.07}
+{'loss': 0.6313, 'grad_norm': 0.2909411973778727, 'learning_rate': 8.254517467653858e-05, 'epoch': 1.1}
+{'loss': 0.642, 'grad_norm': 0.3090729657408378, 'learning_rate': 8.181212211632799e-05, 'epoch': 1.12}
+{'loss': 0.6403, 'grad_norm': 0.29182220408379284, 'learning_rate': 8.106739631625217e-05, 'epoch': 1.15}
+{'loss': 0.6297, 'grad_norm': 0.27811366687820277, 'learning_rate': 8.03112705483319e-05, 'epoch': 1.17}
+{'loss': 0.6344, 'grad_norm': 0.29484370091680373, 'learning_rate': 7.954402226772804e-05, 'epoch': 1.2}
+{'loss': 0.6383, 'grad_norm': 0.31223124584717604, 'learning_rate': 7.876593301093104e-05, 'epoch': 1.22}
+{'loss': 0.6255, 'grad_norm': 0.30195385065912905, 'learning_rate': 7.797728829245321e-05, 'epoch': 1.24}
+{'loss': 0.6381, 'grad_norm': 0.2947523366431039, 'learning_rate': 7.717837750006106e-05, 'epoch': 1.27}
+{'loss': 0.6315, 'grad_norm': 0.2844660241521535, 'learning_rate': 7.636949378858646e-05, 'epoch': 1.29}
+{'loss': 0.6335, 'grad_norm': 0.3135729946258481, 'learning_rate': 7.555093397235552e-05, 'epoch': 1.32}
+{'loss': 0.6291, 'grad_norm': 0.29638050661640575, 'learning_rate': 7.472299841627451e-05, 'epoch': 1.34}
+{'loss': 0.6342, 'grad_norm': 0.328212327543879, 'learning_rate': 7.388599092561315e-05, 'epoch': 1.37}
+{'loss': 0.6231, 'grad_norm': 0.30970583480949526, 'learning_rate': 7.304021863452524e-05, 'epoch': 1.39}
+{'loss': 0.6278, 'grad_norm': 0.2954145144102435, 'learning_rate': 7.218599189334799e-05, 'epoch': 1.41}
+{'loss': 0.6298, 'grad_norm': 0.27911881786111215, 'learning_rate': 7.1323624154721e-05, 'epoch': 1.44}
+{'loss': 0.6268, 'grad_norm': 0.29594602966132394, 'learning_rate': 7.045343185856701e-05, 'epoch': 1.46}
+{'loss': 0.6184, 'grad_norm': 0.30343056946550123, 'learning_rate': 6.957573431597646e-05, 'epoch': 1.49}
+{'loss': 0.6267, 'grad_norm': 0.27638131251653864, 'learning_rate': 6.869085359203844e-05, 'epoch': 1.51}
+{'loss': 0.6235, 'grad_norm': 0.291011431457404, 'learning_rate': 6.779911438766116e-05, 'epoch': 1.54}
+{'loss': 0.6153, 'grad_norm': 0.274151941659265, 'learning_rate': 6.690084392042513e-05, 'epoch': 1.56}
+{'loss': 0.6156, 'grad_norm': 0.26725731776619027, 'learning_rate': 6.599637180451294e-05, 'epoch': 1.59}
+{'loss': 0.6294, 'grad_norm': 0.2889831994023121, 'learning_rate': 6.508602992975963e-05, 'epoch': 1.61}
+{'loss': 0.6199, 'grad_norm': 0.2950280290820891, 'learning_rate': 6.417015233986786e-05, 'epoch': 1.63}
+{'loss': 0.617, 'grad_norm': 0.2943410834303493, 'learning_rate': 6.32490751098331e-05, 'epoch': 1.66}
+{'loss': 0.6275, 'grad_norm': 0.3055587021501166, 'learning_rate': 6.232313622262296e-05, 'epoch': 1.68}
+{'loss': 0.6244, 'grad_norm': 0.30415837089964576, 'learning_rate': 6.139267544515689e-05, 'epoch': 1.71}
+{'loss': 0.625, 'grad_norm': 0.3055608980364813, 'learning_rate': 6.045803420363084e-05, 'epoch': 1.73}
+{'loss': 0.6257, 'grad_norm': 0.3371977000020669, 'learning_rate': 5.951955545823342e-05, 'epoch': 1.76}
+{'loss': 0.6246, 'grad_norm': 0.30866642548425344, 'learning_rate': 5.8577583577298924e-05, 'epoch': 1.78}
+{'loss': 0.6176, 'grad_norm': 0.3064572133164066, 'learning_rate': 5.7632464210943726e-05, 'epoch': 1.8}
+{'loss': 0.6132, 'grad_norm': 0.33388906281746894, 'learning_rate': 5.668454416423242e-05, 'epoch': 1.83}
+{'loss': 0.6183, 'grad_norm': 0.3019280578645594, 'learning_rate': 5.573417126992003e-05, 'epoch': 1.85}
+{'loss': 0.6247, 'grad_norm': 0.3176629936987728, 'learning_rate': 5.478169426081712e-05, 'epoch': 1.88}
+{'loss': 0.6207, 'grad_norm': 0.3127467672099598, 'learning_rate': 5.38274626418248e-05, 'epoch': 1.9}
+{'loss': 0.6113, 'grad_norm': 0.35273336394709387, 'learning_rate': 5.287182656168618e-05, 'epoch': 1.93}
+{'loss': 0.6158, 'grad_norm': 0.3100538787493987, 'learning_rate': 5.191513668450178e-05, 'epoch': 1.95}
+{'loss': 0.6122, 'grad_norm': 0.3038929963494663, 'learning_rate': 5.095774406105571e-05, 'epoch': 1.98}
+{'loss': 0.6235, 'grad_norm': 0.3238110825717284, 'learning_rate': 5e-05, 'epoch': 2.0}
+{'eval_loss': 0.6184434294700623, 'eval_runtime': 89.8012, 'eval_samples_per_second': 4.031, 'eval_steps_per_second': 0.512, 'epoch': 2.0}
+[2025-03-02 00:51:54,906] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step410 is about to be saved!
+[2025-03-02 00:51:54,934] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-03-02 00:51:54,934] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-03-02 00:51:54,993] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-03-02 00:51:54,995] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-03-02 00:51:55,036] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-03-02 00:51:55,037] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-410/global_step410/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-03-02 00:51:55,054] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step410 is ready now!
+{'loss': 0.6072, 'grad_norm': 0.3243713650434016, 'learning_rate': 4.9042255938944296e-05, 'epoch': 2.02}
+{'loss': 0.6035, 'grad_norm': 0.316067152357226, 'learning_rate': 4.8084863315498234e-05, 'epoch': 2.05}
+{'loss': 0.6113, 'grad_norm': 0.3259731381913719, 'learning_rate': 4.712817343831384e-05, 'epoch': 2.07}
+{'loss': 0.6025, 'grad_norm': 0.34123509591776785, 'learning_rate': 4.6172537358175214e-05, 'epoch': 2.1}
+{'loss': 0.6011, 'grad_norm': 0.3000658919527791, 'learning_rate': 4.521830573918289e-05, 'epoch': 2.12}
+{'loss': 0.6042, 'grad_norm': 0.3286237883164358, 'learning_rate': 4.4265828730079987e-05, 'epoch': 2.15}
+{'loss': 0.6123, 'grad_norm': 0.3183199137679708, 'learning_rate': 4.331545583576758e-05, 'epoch': 2.17}
+{'loss': 0.6138, 'grad_norm': 0.33407830762669966, 'learning_rate': 4.236753578905627e-05, 'epoch': 2.2}
+{'loss': 0.6028, 'grad_norm': 0.31608642443868157, 'learning_rate': 4.142241642270108e-05, 'epoch': 2.22}
+{'loss': 0.6036, 'grad_norm': 0.34536656622395057, 'learning_rate': 4.0480444541766576e-05, 'epoch': 2.24}
+{'loss': 0.6079, 'grad_norm': 0.3262255096033682, 'learning_rate': 3.954196579636918e-05, 'epoch': 2.27}
+{'loss': 0.6023, 'grad_norm': 0.32898135597021083, 'learning_rate': 3.8607324554843136e-05, 'epoch': 2.29}
+{'loss': 0.592, 'grad_norm': 0.3192003504270536, 'learning_rate': 3.7676863777377054e-05, 'epoch': 2.32}
+{'loss': 0.6026, 'grad_norm': 0.28713188381575167, 'learning_rate': 3.675092489016693e-05, 'epoch': 2.34}
+{'loss': 0.5987, 'grad_norm': 0.3291020220858178, 'learning_rate': 3.582984766013215e-05, 'epoch': 2.37}
+{'loss': 0.6023, 'grad_norm': 0.31435684197755326, 'learning_rate': 3.4913970070240386e-05, 'epoch': 2.39}
+{'loss': 0.6035, 'grad_norm': 0.3275218653639851, 'learning_rate': 3.4003628195487057e-05, 'epoch': 2.41}
+{'loss': 0.6059, 'grad_norm': 0.3707089336859412, 'learning_rate': 3.309915607957487e-05, 'epoch': 2.44}
+{'loss': 0.5958, 'grad_norm': 0.334075458789155, 'learning_rate': 3.2200885612338845e-05, 'epoch': 2.46}
+{'loss': 0.598, 'grad_norm': 0.31679060842490464, 'learning_rate': 3.130914640796157e-05, 'epoch': 2.49}
+{'loss': 0.6011, 'grad_norm': 0.361752981193679, 'learning_rate': 3.0424265684023558e-05, 'epoch': 2.51}
+{'loss': 0.5957, 'grad_norm': 0.3098885548898129, 'learning_rate': 2.9546568141433006e-05, 'epoch': 2.54}
+{'loss': 0.5955, 'grad_norm': 0.3208101046563382, 'learning_rate': 2.8676375845279013e-05, 'epoch': 2.56}
+{'loss': 0.6002, 'grad_norm': 0.32328343323044545, 'learning_rate': 2.7814008106652012e-05, 'epoch': 2.59}
+{'loss': 0.5934, 'grad_norm': 0.3234697343844021, 'learning_rate': 2.6959781365474758e-05, 'epoch': 2.61}
+{'loss': 0.6052, 'grad_norm': 0.30401935888316534, 'learning_rate': 2.6114009074386846e-05, 'epoch': 2.63}
+{'loss': 0.6072, 'grad_norm': 0.3231852633600721, 'learning_rate': 2.527700158372548e-05, 'epoch': 2.66}
+{'loss': 0.5961, 'grad_norm': 0.323942707749283, 'learning_rate': 2.4449066027644475e-05, 'epoch': 2.68}
+{'loss': 0.6043, 'grad_norm': 0.3186411440737501, 'learning_rate': 2.363050621141354e-05, 'epoch': 2.71}
+{'loss': 0.6034, 'grad_norm': 0.3421532836456018, 'learning_rate': 2.282162249993895e-05, 'epoch': 2.73}
+{'loss': 0.5997, 'grad_norm': 0.3266502367884441, 'learning_rate': 2.20227117075468e-05, 'epoch': 2.76}
+{'loss': 0.6092, 'grad_norm': 0.3111915758721362, 'learning_rate': 2.1234066989068972e-05, 'epoch': 2.78}
+{'loss': 0.5952, 'grad_norm': 0.3329821540763244, 'learning_rate': 2.0455977732271993e-05, 'epoch': 2.8}
+{'loss': 0.5937, 'grad_norm': 0.31215782444899115, 'learning_rate': 1.9688729451668114e-05, 'epoch': 2.83}
+{'loss': 0.595, 'grad_norm': 0.3238598754660625, 'learning_rate': 1.893260368374786e-05, 'epoch': 2.85}
+{'loss': 0.597, 'grad_norm': 0.3154534177355234, 'learning_rate': 1.818787788367202e-05, 'epoch': 2.88}
+{'loss': 0.6037, 'grad_norm': 0.32196367631738854, 'learning_rate': 1.7454825323461448e-05, 'epoch': 2.9}
+{'loss': 0.5939, 'grad_norm': 0.3146607804152656, 'learning_rate': 1.673371499172174e-05, 'epoch': 2.93}
+{'loss': 0.5952, 'grad_norm': 0.3267526344154073, 'learning_rate': 1.6024811494939724e-05, 'epoch': 2.95}
+{'loss': 0.5916, 'grad_norm': 0.32940910659535655, 'learning_rate': 1.532837496038792e-05, 'epoch': 2.98}
+{'loss': 0.5948, 'grad_norm': 0.32586316142591165, 'learning_rate': 1.4644660940672627e-05, 'epoch': 3.0}
+{'eval_loss': 0.6077827215194702, 'eval_runtime': 86.8548, 'eval_samples_per_second': 4.168, 'eval_steps_per_second': 0.53, 'epoch': 3.0}
+[2025-03-02 01:39:50,635] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step615 is about to be saved!
+[2025-03-02 01:39:50,663] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-03-02 01:39:50,663] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-03-02 01:39:50,723] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-03-02 01:39:50,725] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-03-02 01:39:50,764] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-03-02 01:39:50,765] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-03-02 01:39:50,782] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step615 is ready now!
+{'loss': 0.5933, 'grad_norm': 0.31507227556405737, 'learning_rate': 1.3973920319960655e-05, 'epoch': 3.02}
+{'loss': 0.5921, 'grad_norm': 0.33812758520558434, 'learning_rate': 1.3316399221919074e-05, 'epoch': 3.05}
+{'loss': 0.596, 'grad_norm': 0.32792428940348906, 'learning_rate': 1.2672338919401866e-05, 'epoch': 3.07}
+{'loss': 0.6011, 'grad_norm': 0.364878045711614, 'learning_rate': 1.2041975745916472e-05, 'epoch': 3.1}
+{'loss': 0.5943, 'grad_norm': 0.32519078003352575, 'learning_rate': 1.1425541008902851e-05, 'epoch': 3.12}
+{'loss': 0.5821, 'grad_norm': 0.32458031108159036, 'learning_rate': 1.082326090485679e-05, 'epoch': 3.15}
+{'loss': 0.5927, 'grad_norm': 0.34191802952745837, 'learning_rate': 1.0235356436328675e-05, 'epoch': 3.17}
+{'loss': 0.5877, 'grad_norm': 0.32555248218422134, 'learning_rate': 9.662043330828085e-06, 'epoch': 3.2}
+{'loss': 0.5869, 'grad_norm': 0.3219672364335901, 'learning_rate': 9.103531961664118e-06, 'epoch': 3.22}
+{'loss': 0.5935, 'grad_norm': 0.3215808297425796, 'learning_rate': 8.560027270750277e-06, 'epoch': 3.24}
+{'loss': 0.5893, 'grad_norm': 0.32137528581066643, 'learning_rate': 8.031728693402502e-06, 'epoch': 3.27}
+{'loss': 0.5943, 'grad_norm': 0.3515300534988939, 'learning_rate': 7.518830085157735e-06, 'epoch': 3.29}

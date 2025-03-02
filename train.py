@@ -51,6 +51,7 @@ def llm_fine_tune(model_args, data_args, training_args):
     checkpoint = None
     if training_args.resume_from_checkpoint is not None:
         checkpoint = training_args.resume_from_checkpoint
+    print("lets start training...........")
     trainer.train(resume_from_checkpoint=checkpoint)
 
     # saving final model
@@ -74,5 +75,4 @@ if __name__ == "__main__":
         model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
     # Do training
-    print("lets start training")
     llm_fine_tune(model_args, data_args, training_args)
