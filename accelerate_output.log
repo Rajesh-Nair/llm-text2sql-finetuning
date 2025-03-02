@@ -446,3 +446,12 @@ Parameter Offload: Total persistent parameters: 6400000 in 353 params
 {'loss': 0.6123, 'grad_norm': 0.3183199137679708, 'learning_rate': 4.331545583576758e-05, 'epoch': 2.17}
 {'loss': 0.6138, 'grad_norm': 0.33407830762669966, 'learning_rate': 4.236753578905627e-05, 'epoch': 2.2}
 {'loss': 0.6028, 'grad_norm': 0.31608642443868157, 'learning_rate': 4.142241642270108e-05, 'epoch': 2.22}
+{'loss': 0.6036, 'grad_norm': 0.34536656622395057, 'learning_rate': 4.0480444541766576e-05, 'epoch': 2.24}
+{'loss': 0.6079, 'grad_norm': 0.3262255096033682, 'learning_rate': 3.954196579636918e-05, 'epoch': 2.27}
+{'loss': 0.6023, 'grad_norm': 0.32898135597021083, 'learning_rate': 3.8607324554843136e-05, 'epoch': 2.29}
+{'loss': 0.592, 'grad_norm': 0.3192003504270536, 'learning_rate': 3.7676863777377054e-05, 'epoch': 2.32}
+{'loss': 0.6026, 'grad_norm': 0.28713188381575167, 'learning_rate': 3.675092489016693e-05, 'epoch': 2.34}
+{'loss': 0.5987, 'grad_norm': 0.3291020220858178, 'learning_rate': 3.582984766013215e-05, 'epoch': 2.37}
+{'loss': 0.6023, 'grad_norm': 0.31435684197755326, 'learning_rate': 3.4913970070240386e-05, 'epoch': 2.39}
+{'loss': 0.6035, 'grad_norm': 0.3275218653639851, 'learning_rate': 3.4003628195487057e-05, 'epoch': 2.41}
+{'loss': 0.6059, 'grad_norm': 0.3707089336859412, 'learning_rate': 3.309915607957487e-05, 'epoch': 2.44}
