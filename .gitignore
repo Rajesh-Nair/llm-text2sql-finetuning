@@ -1,9 +1,9 @@
 run_steps.sh
-.merged_model/*
+merged_model/*
 **/*.ckpt
 **/*.safetensors
 **/*.pth
-**/*.ipynb_checkpoints/*
+*/.ipynb_checkpoints/*
 **/__pycache__/
 **/*.pyc
 Tinyllama-ft-qlora-dsz3/*
