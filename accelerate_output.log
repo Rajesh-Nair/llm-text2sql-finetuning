@@ -488,3 +488,4 @@ Parameter Offload: Total persistent parameters: 6400000 in 353 params
 [2025-03-02 01:39:50,765] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
 [2025-03-02 01:39:50,782] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step615 is ready now!
 {'loss': 0.5933, 'grad_norm': 0.31507227556405737, 'learning_rate': 1.3973920319960655e-05, 'epoch': 3.02}
+{'loss': 0.5921, 'grad_norm': 0.33812758520558434, 'learning_rate': 1.3316399221919074e-05, 'epoch': 3.05}
