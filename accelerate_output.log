@@ -455,3 +455,36 @@ Parameter Offload: Total persistent parameters: 6400000 in 353 params
 {'loss': 0.6023, 'grad_norm': 0.31435684197755326, 'learning_rate': 3.4913970070240386e-05, 'epoch': 2.39}
 {'loss': 0.6035, 'grad_norm': 0.3275218653639851, 'learning_rate': 3.4003628195487057e-05, 'epoch': 2.41}
 {'loss': 0.6059, 'grad_norm': 0.3707089336859412, 'learning_rate': 3.309915607957487e-05, 'epoch': 2.44}
+{'loss': 0.5958, 'grad_norm': 0.334075458789155, 'learning_rate': 3.2200885612338845e-05, 'epoch': 2.46}
+{'loss': 0.598, 'grad_norm': 0.31679060842490464, 'learning_rate': 3.130914640796157e-05, 'epoch': 2.49}
+{'loss': 0.6011, 'grad_norm': 0.361752981193679, 'learning_rate': 3.0424265684023558e-05, 'epoch': 2.51}
+{'loss': 0.5957, 'grad_norm': 0.3098885548898129, 'learning_rate': 2.9546568141433006e-05, 'epoch': 2.54}
+{'loss': 0.5955, 'grad_norm': 0.3208101046563382, 'learning_rate': 2.8676375845279013e-05, 'epoch': 2.56}
+{'loss': 0.6002, 'grad_norm': 0.32328343323044545, 'learning_rate': 2.7814008106652012e-05, 'epoch': 2.59}
+{'loss': 0.5934, 'grad_norm': 0.3234697343844021, 'learning_rate': 2.6959781365474758e-05, 'epoch': 2.61}
+{'loss': 0.6052, 'grad_norm': 0.30401935888316534, 'learning_rate': 2.6114009074386846e-05, 'epoch': 2.63}
+{'loss': 0.6072, 'grad_norm': 0.3231852633600721, 'learning_rate': 2.527700158372548e-05, 'epoch': 2.66}
+{'loss': 0.5961, 'grad_norm': 0.323942707749283, 'learning_rate': 2.4449066027644475e-05, 'epoch': 2.68}
+{'loss': 0.6043, 'grad_norm': 0.3186411440737501, 'learning_rate': 2.363050621141354e-05, 'epoch': 2.71}
+{'loss': 0.6034, 'grad_norm': 0.3421532836456018, 'learning_rate': 2.282162249993895e-05, 'epoch': 2.73}
+{'loss': 0.5997, 'grad_norm': 0.3266502367884441, 'learning_rate': 2.20227117075468e-05, 'epoch': 2.76}
+{'loss': 0.6092, 'grad_norm': 0.3111915758721362, 'learning_rate': 2.1234066989068972e-05, 'epoch': 2.78}
+{'loss': 0.5952, 'grad_norm': 0.3329821540763244, 'learning_rate': 2.0455977732271993e-05, 'epoch': 2.8}
+{'loss': 0.5937, 'grad_norm': 0.31215782444899115, 'learning_rate': 1.9688729451668114e-05, 'epoch': 2.83}
+{'loss': 0.595, 'grad_norm': 0.3238598754660625, 'learning_rate': 1.893260368374786e-05, 'epoch': 2.85}
+{'loss': 0.597, 'grad_norm': 0.3154534177355234, 'learning_rate': 1.818787788367202e-05, 'epoch': 2.88}
+{'loss': 0.6037, 'grad_norm': 0.32196367631738854, 'learning_rate': 1.7454825323461448e-05, 'epoch': 2.9}
+{'loss': 0.5939, 'grad_norm': 0.3146607804152656, 'learning_rate': 1.673371499172174e-05, 'epoch': 2.93}
+{'loss': 0.5952, 'grad_norm': 0.3267526344154073, 'learning_rate': 1.6024811494939724e-05, 'epoch': 2.95}
+{'loss': 0.5916, 'grad_norm': 0.32940910659535655, 'learning_rate': 1.532837496038792e-05, 'epoch': 2.98}
+{'loss': 0.5948, 'grad_norm': 0.32586316142591165, 'learning_rate': 1.4644660940672627e-05, 'epoch': 3.0}
+{'eval_loss': 0.6077827215194702, 'eval_runtime': 86.8548, 'eval_samples_per_second': 4.168, 'eval_steps_per_second': 0.53, 'epoch': 3.0}
+[2025-03-02 01:39:50,635] [INFO] [logging.py:128:log_dist] [Rank 0] [Torch] Checkpoint global_step615 is about to be saved!
+[2025-03-02 01:39:50,663] [INFO] [logging.py:128:log_dist] [Rank 0] Saving model checkpoint: Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-03-02 01:39:50,663] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-03-02 01:39:50,723] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-03-02 01:39:50,725] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-03-02 01:39:50,764] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-03-02 01:39:50,765] [INFO] [engine.py:3645:_save_zero_checkpoint] zero checkpoint saved Tinyllama-ft-qlora-dsz3/checkpoint-615/global_step615/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-03-02 01:39:50,782] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step615 is ready now!
+{'loss': 0.5933, 'grad_norm': 0.31507227556405737, 'learning_rate': 1.3973920319960655e-05, 'epoch': 3.02}
