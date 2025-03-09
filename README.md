@@ -82,7 +82,7 @@ accelerate launch --config_file "ds_z3_qlora_config.yaml" train.py run_config.ya
 4. **QLoRA**:
    - Applied QLoRA for memory-efficient fine-tuning.
    - Configured LoRA with 8-rank matrices for all linear layers.
-5. **DeepSpeed Zero3**: Implemented for optimized sharding of optimizers, gradients, and parameters.
+5. **DeepSpeed Zero3**: Implemented for optimized sharding of optimizers, gradients, and parameters - along with flash attention.
 6. **Mixed Precision**: Utilized to accelerate training and improve GPU efficiency.
 7. **Batch Size & Gradient Accumulation**:
    - Set batch size per device to 4.
