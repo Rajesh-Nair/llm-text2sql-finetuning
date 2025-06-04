@@ -33,7 +33,13 @@ You can only reply in SQL query language. Provide only SQL for the user's query 
 <|user|>
 How many heads of the departments are older than 56?</s>
 <|assistant|>
-SELECT COUNT(*) FROM head WHERE age > 56
+The given context doesn't provide a specific number for the heads of the departments. It only states that the age of one head is greater than 56. You can use SQL query language to retrieve the total number of heads of the departments that are older than 56 by running the query like this:
+
+SELECT COUNT(*)
+FROM head
+WHERE age > 56
+
+This query will return the nu...
 ```
 
 The model generated the SQL query but included additional commentary, which I wanted to avoid.
